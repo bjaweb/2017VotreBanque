@@ -20,4 +20,9 @@ public class SecuriteController {
     public String home() {	
 	return "redirect:/operations";
     }
+   
+   @RequestMapping("/403") // action par defaut
+   public String accesDenied() {	
+	return "403";
+   }
 }
