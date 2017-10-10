@@ -28,9 +28,9 @@
 				</div>
 			</div>
 			
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" th:if="${compte}">
 				<div class="panel-heading">informations sur le compte</div>
-				<div class="panel-body" th:if="${compte}">
+				<div class="panel-body" >
 					<div>
 						<label>Client :</label>
 						<label th:text="${compte.client.nom}"></label>
@@ -67,7 +67,7 @@
 
 		<!-- partie droite -->
 		<div class="col-md-6">
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" th:if="${compte}">
 				<div class="panel-heading">operations sur le compte</div>
 				<div class="panel-body">
 					<form th:action="@{/saveOperation}" method="post">
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 			
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" th:if="${compte}">
 				<div class="panel-heading">liste des op&eacute;rations</div>
 				<div class="panel-body">
 					<table class="table table-striped">

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SecuriteController {
 
-//    @RequestMapping(value="/login",method=RequestMethod.POST)
+//    appel de la methode en get 
     @RequestMapping(value="/login")
     public String login() {
 	
@@ -14,8 +14,10 @@ public class SecuriteController {
     }
     
     
-//    @RequestMapping("/") // action par defaut
-//    public String home() {	
-//	return "redirect:/operations";
-//    }
+    // l'appel en post se fait par le bouton valider
+    
+   @RequestMapping("/") // action par defaut
+    public String home() {	
+	return "redirect:/operations";
+    }
 }
