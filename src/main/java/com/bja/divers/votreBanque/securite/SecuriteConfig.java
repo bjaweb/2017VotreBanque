@@ -19,12 +19,12 @@ public class SecuriteConfig extends WebSecurityConfigurerAdapter{
 	@Autowired
 	private DataSource dataSource;
 
-	public static void main(String[] args) {
-		//StandardPasswordEncoder encoder = new StandardPasswordEncoder("SHA256");
-		StandardPasswordEncoder encoder = new StandardPasswordEncoder();
-		
-		System.out.println(encoder.encode("1234"));
-	}
+//	public static void main(String[] args) {
+//		//StandardPasswordEncoder encoder = new StandardPasswordEncoder("SHA256");
+//		StandardPasswordEncoder encoder = new StandardPasswordEncoder();
+//		
+//		System.out.println(encoder.encode("1234"));
+//	}
 	
 	
     @Override
@@ -43,7 +43,7 @@ public class SecuriteConfig extends WebSecurityConfigurerAdapter{
        	.usersByUsernameQuery("select username as principal, password as credentials, active from users where username = ?")  // verif deja si exist puis apres verif role
         .authoritiesByUsernameQuery("select username as principal, role as role from users_roles where username = ?")
         .rolePrefix("ROLE_")
-        .passwordEncoder(new StandardPasswordEncoder())
+        //.passwordEncoder(new StandardPasswordEncoder())
         ; // ajouter le prefix ROLE_
        
        
