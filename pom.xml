@@ -10,8 +10,11 @@
 	</parent>
 	<artifactId>votreBanque</artifactId>
 	<groupId>com.bja.divers</groupId>
-	<!-- <packaging>war</packaging> -->
-	<packaging>jar</packaging>
+	<packaging>war</packaging> 
+		
+	<!-- a utiliser pour le dev et executer le serveur tomcat en embeddl -->
+	<!-- <packaging>jar</packaging> -->
+	
 	<name>Spring Boot Web JSP Sample</name>
 	<description>Spring Boot Web JSP Sample</description>
 	<version>0.0.1-SNAPSHOT</version>
@@ -38,26 +41,26 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<dependency>
+	    <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
-			<scope>provided</scope> </dependency> -->
+		
+		<!-- pour transformer l'appli en war pour pour executer sur un vrai serveur -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-jasper</artifactId> 
 			<scope>provided</scope> </dependency> -->
 		<dependency>
@@ -100,5 +103,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+	 <finalName>votreBanque</finalName>
 	</build>
 </project>
