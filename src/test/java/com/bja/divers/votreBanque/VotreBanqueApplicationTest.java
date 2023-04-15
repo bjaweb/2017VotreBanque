@@ -44,7 +44,8 @@ public class VotreBanqueApplicationTest implements CommandLineRunner{
 
 	}
 
-	//    @Autowired
+	//    	todo à nettoyer
+	//	@Autowired
 	//    private ClientRepository clientRepository;
 	//    
 	//    public static void main(String[] args) {
